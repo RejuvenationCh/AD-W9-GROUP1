@@ -8,6 +8,7 @@ import week.kamen.raideh.CoreMedal.MedalName;
 public class ComboCatalogue {
    private List<ComboRule> rules = new ArrayList();
 
+   // TODO : print a chant or announcement for each full combo
    public ComboCatalogue() {
       this.rules.add(new ComboRule("Tatoba", MedalName.TAKA, MedalName.TORA, MedalName.BATTA));
       this.rules.add(new ComboRule("Gatakiriba", MedalName.KUWAGATA, MedalName.KAMAKIRI, MedalName.BATTA));

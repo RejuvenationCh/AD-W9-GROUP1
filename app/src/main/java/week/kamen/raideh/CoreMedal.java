@@ -37,6 +37,7 @@ public class CoreMedal {
       KUWAGATA(CoreMedal.SlotType.HEAD),
       PTERA(CoreMedal.SlotType.HEAD),
       COBRA(CoreMedal.SlotType.HEAD),
+
       TORA(CoreMedal.SlotType.ARMS),
       KAMAKIRI(CoreMedal.SlotType.ARMS),
       GORILLA(CoreMedal.SlotType.ARMS),
@@ -44,6 +45,7 @@ public class CoreMedal {
       KUJAKU(CoreMedal.SlotType.ARMS),
       TRICERA(CoreMedal.SlotType.ARMS),
       KAME(CoreMedal.SlotType.ARMS),
+      
       BATTA(CoreMedal.SlotType.LEGS),
       CHEETAH(CoreMedal.SlotType.LEGS),
       ZOU(CoreMedal.SlotType.LEGS),
@@ -53,7 +55,6 @@ public class CoreMedal {
       WANI(CoreMedal.SlotType.LEGS);
 
       private final SlotType slot;
-
       private MedalName(SlotType slot) {
          this.slot = slot;
       }
