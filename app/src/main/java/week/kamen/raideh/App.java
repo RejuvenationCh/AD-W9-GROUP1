@@ -8,15 +8,18 @@ public class App {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
-      OOODriver driver = new OOODriver();
-      driver.insertMedal(new CoreMedal(MedalName.TAKA));
-      driver.insertMedal(new CoreMedal(MedalName.TORA));
-      driver.insertMedal(new CoreMedal(MedalName.BATTA));
-      ComboCatalogue catalogue = new ComboCatalogue();
-      TransformationEngine engine = new TransformationEngine(catalogue);
-      OScanner scanner = new OScanner(engine);
-      System.out.println(scanner.scan(driver));
+public static void main(String[] args) {
+    OOODriver driver = new OOODriver();
+    ComboCatalogue catalogue = new ComboCatalogue();
+    TransformationEngine engine = new TransformationEngine(catalogue);
+    OScanner scanner = new OScanner(engine);
+    System.out.println(scanner.scan(driver));
+
+    // TODO : Let users select actions from a menu instead of a one-time demo flow & Optoion to see history
+      
+    driver.insertMedal(new CoreMedal(MedalName.TAKA));
+    driver.insertMedal(new CoreMedal(MedalName.TORA));
+    driver.insertMedal(new CoreMedal(MedalName.BATTA));
 
     }
 }
