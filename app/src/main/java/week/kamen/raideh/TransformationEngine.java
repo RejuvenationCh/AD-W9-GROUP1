@@ -1,11 +1,10 @@
-// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+
 package week.kamen.raideh;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import week.kamen.raideh.CoreMedal.SlotType;
-import week.kamen.raideh.ComboRule;
 
 public class TransformationEngine {
    private final ComboCatalogue catalogue;

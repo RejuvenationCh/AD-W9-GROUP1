@@ -1,4 +1,4 @@
-// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+
 package week.kamen.raideh;
 
 import java.util.ArrayList;
@@ -8,7 +8,6 @@ import week.kamen.raideh.CoreMedal.MedalName;
 public class ComboCatalogue {
    private List<ComboRule> rules = new ArrayList();
 
-   // TODO : print a chant or announcement for each full combo
    public ComboCatalogue() {
       this.rules.add(new ComboRule("Tatoba", MedalName.TAKA, MedalName.TORA, MedalName.BATTA, "Taka! Tora! Batta! Ta-To-Ba! Tatoba, Ta-To-Ba!"));
       this.rules.add(new ComboRule("Gatakiriba", MedalName.KUWAGATA, MedalName.KAMAKIRI, MedalName.BATTA, "Kuwagata! Kamakiri! Batta! Ga-Ta-Ga-Ta-Gatakiriba Gatakiriba!"));

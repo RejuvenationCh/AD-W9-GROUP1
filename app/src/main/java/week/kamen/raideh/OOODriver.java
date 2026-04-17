@@ -1,4 +1,4 @@
-// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+
 package week.kamen.raideh;
 
 import java.util.EnumMap;
@@ -6,8 +6,6 @@ import java.util.EnumMap;
 public class OOODriver {
    private EnumMap<CoreMedal.SlotType, CoreMedal> slots = new EnumMap(CoreMedal.SlotType.class);
 
-   //TODO :  prevent loading a second medal into an already occupied slot unless the first is ejected first
-   // Jadi disini mungkin kasih hilang saja restriksinya user, jadi di slot manapun bisa ditaroh medal apapun, tapi kalau misal invalid position ,masuknya ke failed state  & gagal transform
    public OOODriver() {
    }
     public boolean insertMedal(CoreMedal medal) {
