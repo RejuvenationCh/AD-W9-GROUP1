@@ -15,7 +15,7 @@ public static void main(String[] args) {
     TransformationEngine engine = new TransformationEngine(catalogue);
     OScanner scanner = new OScanner(engine);
     Scanner input = new Scanner(System.in);
-    System.out.println(scanner.scan(driver));
+  
     driver.insertMedal(new CoreMedal(MedalName.TAKA));
     driver.insertMedal(new CoreMedal(MedalName.TORA));
     driver.insertMedal(new CoreMedal(MedalName.BATTA));
@@ -44,7 +44,7 @@ while (true) {
          System.out.println("1. Insert Medal");
          System.out.println("2. Remove Single Medal");
          System.out.println("3. Remove All Medals");
-         System.out.println("4. Scan Driver");
+         System.out.println("4. Scan Belt");
          System.out.println("5. View History");
          System.out.println("6. Exit");
          System.out.print("Select action: ");
@@ -52,7 +52,7 @@ while (true) {
          String choice = input.nextLine();
          if (choice.equals("1")) {
              if (currentMedals.size() >= 3) {
-                 System.out.println("Error: Driver is full. Remove a medal first.");
+                 System.out.println("Error: Belt is full. Remove a medal first.");
                  continue;
              }
              System.out.print("Enter Medal Name (e.g., TAKA, TORA, BATTA): ");
@@ -85,7 +85,7 @@ while (true) {
              }
          } else if (choice.equals("3")) {
              if (currentMedals.isEmpty()) {
-                 System.out.println("Error: Driver is already empty.");
+                 System.out.println("Error: Belt is already empty.");
              } else {
                  currentMedals.clear();
                  System.out.println("Success: All medals have been removed.");
