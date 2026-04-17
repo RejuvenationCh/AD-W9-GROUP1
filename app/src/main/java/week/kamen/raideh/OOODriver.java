@@ -26,7 +26,6 @@ public class OOODriver {
       return this.slots;
    }
 
-   // TODO : allow medals to be ejected and replaced
    public CoreMedal ejectMedal(CoreMedal.SlotType slot) {
       return this.slots.remove(slot);
    }

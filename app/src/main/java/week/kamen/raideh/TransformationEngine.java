@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import week.kamen.raideh.CoreMedal.SlotType;
+import week.kamen.raideh.ComboRule;
 
 public class TransformationEngine {
    private final ComboCatalogue catalogue;
@@ -21,26 +22,31 @@ public class TransformationEngine {
 
    public TransformationResult transform(OOODriver driver) {
       if (!driver.isComplete()) {
-         return new TransformationResult("Cannot Scan");
+         return new TransformationResult("Cannot Scan", null);
       } else {
         CoreMedal head = driver.getMedals().get(SlotType.HEAD);
         CoreMedal arms = driver.getMedals().get(SlotType.ARMS);
         CoreMedal legs = driver.getMedals().get(SlotType.LEGS);
         
-        String combo = this.catalogue.findMatch(head, arms, legs);
+        ComboRule combo = this.catalogue.findMatch(head, arms, legs);
         String result;
+        String chant;
 
-      if (combo != null) {
-         result = combo;
+     if (combo != null) {
+         result = combo.getComboName(); 
+         chant = combo.getChant();
       } else {
          result = "Mixed Form";
+         chant = null;
       }
 
          if (result.equals(this.lastResult)) {
-            return new TransformationResult("Scanning Charge");
+            this.history.add("Scanning Charge"); 
+            return new TransformationResult("Scanning Charge", null);
          } else {
             this.lastResult = result;
-            return new TransformationResult(result);
+            this.history.add(result);
+            return new TransformationResult(result, chant);
          }
       }
    }
