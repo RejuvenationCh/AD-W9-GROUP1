@@ -19,7 +19,6 @@ public static void main(String[] args) {
     driver.insertMedal(new CoreMedal(MedalName.TAKA));
     driver.insertMedal(new CoreMedal(MedalName.TORA));
     driver.insertMedal(new CoreMedal(MedalName.BATTA));
-
       
 while (true) {
          System.out.println("--- OOO Driver Training Simulation ---");

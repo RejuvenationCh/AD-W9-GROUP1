@@ -10,7 +10,6 @@ public class TransformationEngine {
    private final ComboCatalogue catalogue;
    private String lastResult = null;
    private final List<String> history = new ArrayList<>();
-
    public TransformationEngine(ComboCatalogue catalogue) {
       this.catalogue = catalogue;
    }
@@ -47,6 +46,6 @@ public class TransformationEngine {
             this.history.add(result);
             return new TransformationResult(result, chant);
          }
-      }
+      } 
    }
 }
