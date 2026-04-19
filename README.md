@@ -25,11 +25,11 @@ Follow this steps to set up the project on your local machine:
 
 3. Compile the Source Code Compile all Java files into bytecode. This will create .class files for each component:
     ```bash
-    >javac *.java
+    javac *.java
 
 4. Run the Application Launch the simulation via the main entry point:
     ```bash
-    >java App
+    java App
 
 ## Collections Framework
 - EnumMap (OOODriver.java)
